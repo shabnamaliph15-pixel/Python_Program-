@@ -1,27 +1,21 @@
-#Task 1: Calculate Factorial Using a Function 
+#Task 1: Read a File and Handle Errors 
 
-def factorial(n):
-    if n == 0 or n == 1:
-     return 1
-    else:
-     return n * factorial(n - 1)
+try:
+    file1= open('sample.txt','r') 
+    print('Reading file content: ')
+    reading_file= file1.readlines() 
+    for i, line in enumerate(reading_file, start=1):
+      print(f"Line {i}: {line.strip()}")
+    file1.close()
+except FileNotFoundError:
+    print("Error: The file 'sample.txt' was not found.")
 
-num = int(input('Enter a number: '))
-print(f"The factorial of {num} is: {factorial(num)}")
+
+
+
+#Task 2: Write and Append Data to a File
 
 
 
 
-#Task 2: Using the Math Module for Calculations
-
-import math
-num = float(input('Enter a number: '))
-
-square_root=math.sqrt(num)
-natural_log=math.log(num)
-sine_value=math.sin(num)
-
-print(f"Square root: {square_root}")
-print(f"logarithm: {natural_log}")
-print(f"Sine: {sine_value}")
 
