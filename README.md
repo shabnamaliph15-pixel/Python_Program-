@@ -15,6 +15,20 @@ except FileNotFoundError:
 
 #Task 2: Write and Append Data to a File
 
+with open("output.txt", "w") as file:
+    user_input = input("Enter text to write to the file: ")
+    file.write(user_input + "\n")
+    print('Data sucessfully written to output.txt.')
+    
+with open("output.txt", "a") as file:
+    extra_data = input("Enter additional text to append: ")
+    file.write(extra_data + "\n")
+    print('Data sucessfully appended.')
+    
+with open("output.txt", "r") as file:
+    print("\nFinal content of output.txt:")
+    print(file.read())
+
 
 
 
