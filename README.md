@@ -1,27 +1,29 @@
-#Task 1: Calculate Factorial Using a Function 
+#Task 1: Perform Basic Mathematical Operations
 
-def factorial(n):
-    if n == 0 or n == 1:
-     return 1
-    else:
-     return n * factorial(n - 1)
+num1 = int(input("Enter the first number: "))
+num2 = int(input("Enter the second number: "))
 
-num = int(input('Enter a number: '))
-print(f"The factorial of {num} is: {factorial(num)}")
+addition = num1 + num2
+subtraction = num1 - num2
+multiplication = num1 * num2
+
+if num2 != 0:
+    division = num1 / num2
+else:
+    division = "Undefined (cannot divide by zero)"
+
+print(f"Addition: {addition}")
+print(f"Subtraction: {subtraction}")
+print(f"Multiplication: {multiplication}")
+print(f"Division: {division}")
 
 
 
 
-#Task 2: Using the Math Module for Calculations
+#Task 2: Create a Personalized Greeting
 
-import math
-num = float(input('Enter a number: '))
+first_name = input("Enter your first name: ")
+last_name = input("Enter your last name: ")
 
-square_root=math.sqrt(num)
-natural_log=math.log(num)
-sine_value=math.sin(num)
-
-print(f"Square root: {square_root}")
-print(f"logarithm: {natural_log}")
-print(f"Sine: {sine_value}")
-
+full_name = first_name + " " + last_name
+print(f"\nHello, {full_name}! Welcome to the program.")
